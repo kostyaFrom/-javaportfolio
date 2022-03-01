@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="layouts :: header-custom"></head>
+<body id="page-top">
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <p class="navbar-brand">
+        <span class="d-none d-lg-block">
+            <img class="img-fluid img-profile rounded-circle mx-auto mb-2"
+                 th:src="@{/images/profile.png}" alt="profile image"/>
+        </span>
+    </p>
+    <h4 class="mb-0">[[#{app.dev.name}]]</h4>
+
+    <!-- About-->
+    <div class="contacts">
+        <section class="resume-section" id="about">
+            <div class="resume-section-content">
+                <div class="subheading mb-5">
+                    <p>[[#{app.dev.contacts}]]</p>
+                    <p>[[#{app.dev.phone}]]</p>
+                    <p>[[#{app.dev.email}]]</p>
+                    <a th:href="@{/files/konstantin_bulygin_java_developer_cv.pdf}"
+                       download="konstantin_bulygin_java_developer_cv">[[#{app.dev.download}]]</a>
+                </div>
+                <div class="social-icons">
+                    <a class="social-icon" href="https://www.linkedin.com/in/kostyafrom" target="_blank"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a class="social-icon" href="https://github.com/kostyaFrom?tab=repositories" target="_blank"><i
+                            class="fab fa-github"></i></a>
+                    <a class="social-icon" href="https://www.facebook.com/" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </section>
+    </div>
+</nav>
+
+<!-- Page Content-->
+<div class="container-fluid p-0">
+
+    <div class="container ml-2  mt-3">
+        <a th:href="@{?lang=en}">
+            <img th:src="@{/images/uk.png}" about="uk"><span class="ml-2">[[#{lang.eng}]]</span>
+        </a>
+        <a th:href="@{?lang=ru}" class="ml-2">
+            <img th:src="@{/images/ru.png}" about="ru"><span class="ml-2">[[#{lang.ru}]]</span>
+        </a>
+    </div>
+
+
+    <!-- Skills-->
+    <section class="resume-section" id="skills">
+        <div class="resume-section-content">
+            <h4 class="mb-5">[[#{app.dev.skills}]]</h4>
+            <ul class="list-inline dev-icons">
+                <li class="list-inline-item"><b>[[#{app.dev.java}]]</b></li>
+                <li class="list-inline-item"><b>[[#{app.dev.spring}]]</b></li>
+                <li class="list-inline-item"><b>[[#{app.dev.postgresql}]]</b></li>
+                <li class="list-inline-item"><b>[[#{app.dev.thymeleaf}]]</b></li>
+                <li class="list-inline-item"><b>[[#{app.dev.restapi}]]</b></li>
+                <li class="list-inline-item"><b>[[#{app.dev.html}]]</b></li>
+            </ul>
+        </div>
+    </section>
+
+    <hr class="m-0"/>
+
+    <!-- Experience-->
+    <section class="resume-section" id="experience">
+        <div class="resume-section-content">
+            <h4 class="mb-5">[[#{app.dev.exp}]]</h4>
+            <div class="d-flex flex-column">
+                <div class="flex-grow-1 dev-icons">
+
+                    <p>[[#{app.dev.deploy}]]</p>
+
+                    <ul>
+                        <li>[[#{app.dev.links.heroku}]]</li>
+                        <ul>
+                            <li>
+                                <a href="https://clients-friends-app.herokuapp.com/" target="_blank">[[#{app.project.friend_app}]]</a>
+                            </li>
+                            <li>
+                                <a href="https://online-store-spring-boot.herokuapp.com" target="_blank">[[#{app.project.online_store}]]</a>
+                            </li>
+                            <li>
+                                <a href="https://online-pma-app.herokuapp.com"
+                                   target="_blank">[[#{app.project.pma}]]</a>
+                            </li>
+                        </ul>
+
+                        <li>[[#{app.dev.links.github}]]</li>
+                        <ul>
+                            <li>
+                                <a href="https://github.com/kostyaFrom/friendApp" target="_blank">[[#{app.project.friend_app}]]</a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/kostyaFrom/onlineStore" target="_blank">[[#{app.project.online_store}]]</a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/kostyaFrom/projectManApp" target="_blank">[[#{app.project.pma}]]</a>
+                            </li>
+                        </ul>
+                        <li>[[#{app.dev.links.swagger}]]</li>
+                        <ul>
+                            <li>
+                                <a href="https://clients-friends-app.herokuapp.com/swagger-ui/" target="_blank">[[#{app.project.swagger_ui_restapi}]]</a>
+                            </li>
+                        </ul>
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="m-0"/>
+
+    <!-- Education-->
+    <section class="resume-section" id="education">
+        <div class="resume-section-content">
+            <h4 class="mb-5">[[#{app.dev.edu}]]</h4>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <p>
+                        [[#{app.dev.education.description}]] <a href="https://edu.rosdistant.ru/" target="_blank">[[#{app.dev.tgu}]]</a>
+                        [[#{app.dev.subject}]]
+                    </p>
+                </div>
+            </div>
+
+            <p>[[#{app.dev.udemy}]]</p>
+            <ul>
+                <li>
+                    <a href="https://www.udemy.com/share/101Wdq3@HpK0UTQKqhXKddNxGo3MGggmQu8uZ9Fl2cfffqr1doVsttorfLm2neE0J1CvNVQa/"
+                       target="_blank">
+                        Java Programming Masterclass covering Java 11 & Java 17
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.udemy.com/share/102urC3@JvdlmiviDDxFQuZdsp174fkXg7VrFJ2f1DvkUH_-Bb2Ikid9lNf8L5Dw1MYeHol5/"
+                       target="_blank">
+                        Практический курс для новичков по SQL и PostgreSQL
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.udemy.com/share/102dJe3@a8_kiuxrg6UUJ5DhyXQep1bD26oHM4DU-b-30qAvhJmLvxb-VWgewiWWOM6v_f9E/"
+                       target="_blank">
+                        Learn Spring 5, Boot 2, JPA, Thymeleaf.
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.udemy.com/share/1013ja3@sx5yMqzT4VHNOFw61MGEnT5huYddzTfT2NcvUnYQtxMZ42f1sJ1Id4twbOQtYSgK/"
+                       target="_blank">
+                        Master the Coding Interview: Data Structures + Algorithms
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+
+    </section>
+
+    <hr class="m-0"/>
+
+    <!--additional info-->
+    <section class="resume-section" id="additional">
+        <div class="resume-section-content">
+            <h4 class="mb-5">[[#{app.dev.addition}]]</h4>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <p>[[#{app.dev.addition.info}]]</p>
+                    <p>[[#{app.dev.relocate}]]</p>
+                    <p>[[#{app.dev.dob}]]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="m-0"/>
+
+    <!-- Contacts-->
+    <section class="resume-section" id="contacts">
+        <div class="resume-section-contacts">
+            <h4 class="mb-5">[[#{app.dev.contacts}]]</h4>
+            <div class="flex-grow-1 contacts-info">
+                <p>[[#{app.dev.phone}]]</p>
+                <p>[[#{app.dev.email}]]</p>
+            </div>
+            <div class="contacts-info-fab">
+                <a class="social-icon" href="https://www.linkedin.com/in/kostyafrom" target="_blank"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a class="social-icon" href="https://github.com/kostyaFrom?tab=repositories" target="_blank"><i
+                        class="fab fa-github"></i></a>
+                <a class="social-icon" href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+</html>
